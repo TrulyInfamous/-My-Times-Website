@@ -2,20 +2,24 @@ html, body {
   margin: 0;
   padding: 0;
 }
+a {
+  color: black;
+}
 .column {
   margin-right: 30px;
 }
 .column.large {
   width: 630px;
-  border: 1px solid black;
+  min-width: 630px;
 }
 .column.medium {
   width: 300px;
-  border: 1px solid black;
+  min-width: 300px;
 }
 .column.small {
   width: 240px;
-  border: 1px solid black;
+  min-width: 240px;
+  flex-flow: column wrap;
 }
 header {
   display: flex;
@@ -38,9 +42,10 @@ header {
 main {
   display: flex;
   position: static;
+  min-width: 1260px;
   justify-content: center;
-  border: 1px solid black;
   margin-top: 30px;
+  margin-bottom: 80px;
 }
 .header_logo {
   display: flex;
@@ -68,26 +73,26 @@ span {
   display: flex;
   height: 300px;
   background-image: url('../img-story-main.png');
+  align-items: center;
 }
 .main_image p {
   font-family: Georgia;
   font-weight: bold;
   font-size: 40px;
   color: white;
+  margin-left: 20px;
 }
 p {
   font-family: Georgia;
   font-size: 17px;
   color: black;
 }
-.main_image p {
-  margin: 0;
-}
 .story2 {
   display: flex;
   background-image: url('../img-story-2.png');
   height: 300px;
   justify-content: center;
+  align-items: center;
 }
 .story2 p {
   font-family: Georgia;
@@ -101,6 +106,7 @@ p {
   background-image: url('../img-story-3.png');
   height: 300px;
   justify-content: center;
+  align-items: center;
 }
 .story3 p {
   font-family: Georgia;
@@ -114,6 +120,7 @@ p {
   background-image: url('../img-story-1.png');
   height: 300px;
   justify-content: center;
+  align-items: center;
 }
 .story1 p {
   font-family: Georgia;
@@ -121,4 +128,59 @@ p {
   font-size: 30px;
   color: white;
   text-align: center;
+}
+.left {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: 300px;
+}
+.right {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: 300px;
+}
+.split {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.list p {
+  background-color: WhiteSmoke;
+  font-family: Verdana;
+  font-size: 12px;
+  color: DimGray;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+.news_bites h2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+footer {
+  background-color: MediumAquamarine;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-family: Verdana;
+  font-size: 12px;
+}
+#footer_my_times {
+  font-family: Georgia;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+h2 {
+  font-family: Georgia;
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+  margin-top: 0;
 }
